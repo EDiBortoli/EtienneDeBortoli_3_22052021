@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("./font/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("./font/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'robotothin';
+  src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.eot");
+  src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype");
+  font-weight: thin;
+  font-style: thin;
+  font-family: 'robotobold';
+  src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+  src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+  font-family: 'Shrikhandregular';
+  src: url("./font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  font-size: 10px; }
+
+body {
+  font-family: 'robotoregular', sans-serif;
+  max-width: 450px;
+  margin: 0;
+  padding: 0; }
+  body header {
+    background-color: white;
+    height: 70px;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    body header .arrow-left {
+      font-size: 2rem;
+      position: absolute;
+      left: 2.5rem; }
+    body header img {
+      width: 50%; }
+  body .page_daccueil {
+    z-index: 1; }
+    body .page_daccueil .localisation {
+      background-color: #EAEAEA;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      height: 55px;
+      justify-content: center;
+      font-size: 1.75rem;
+      box-shadow: 0px 2px 5px #aaaaaa inset; }
+      body .page_daccueil .localisation .fas {
+        position: relative;
+        right: 20px; }
+    body .page_daccueil .presentation {
+      background-color: #f6f6f6;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 50px 25px 50px 25px;
+      flex-direction: column;
+      height: 315px; }
+      body .page_daccueil .presentation h2 {
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5rem; }
+      body .page_daccueil .presentation p {
+        text-align: center;
+        font-family: 'robotothin', sans-serif;
+        font-size: 2rem; }
+      body .page_daccueil .presentation a {
+        text-decoration: none;
+        color: black;
+        font-weight: normal; }
+        body .page_daccueil .presentation a .btn {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-wrap: wrap; }
+        body .page_daccueil .presentation a .btn_rose {
+          cursor: pointer;
+          padding: 17.5px 30px;
+          border-radius: 30px;
+          font-size: 1.75rem;
+          box-shadow: 0px 5px 10px #aaaaaa;
+          color: white;
+          background: #FF79DA; }
+          body .page_daccueil .presentation a .btn_rose:hover {
+            background: #9e79ff; }
+    body .page_daccueil .fonctionnement {
+      padding: 50px 25px 50px 25px; }
+      body .page_daccueil .fonctionnement h2 {
+        font-size: 2.5rem; }
+      body .page_daccueil .fonctionnement .btn_fonctionnement {
+        font-size: 1.75rem;
+        background-color: #f6f6f6;
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
+        align-items: baseline;
+        margin: 25px 0;
+        padding-top: 27.5px;
+        padding-bottom: 27.5px;
+        border-radius: 25px;
+        box-shadow: 0px 5px 10px #aaaaaa; }
+        body .page_daccueil .fonctionnement .btn_fonctionnement .pastille_violette {
+          background-color: #9356DC;
+          color: white;
+          padding: 5px 10px;
+          font-size: 1.5rem;
+          border-radius: 30px;
+          position: relative;
+          left: -5px; }
+    body .page_daccueil .restaurants {
+      background-color: #f6f6f6;
+      max-width: 100%;
+      padding: 50px 25px 50px 25px; }
+      body .page_daccueil .restaurants h2 {
+        font-size: 2.5rem; }
+      body .page_daccueil .restaurants a {
+        max-width: 100px;
+        height: 100px;
+        text-decoration: none;
+        color: black;
+        border-radius: 25px;
+        border: 1px solid black;
+        box-shadow: 0px 5px 10px #aaaaaa;
+        overflow: hidden; }
+      body .page_daccueil .restaurants__bloc--image {
+        position: relative;
+        overflow: hidden; }
+        body .page_daccueil .restaurants__bloc--image img {
+          max-width: 100%;
+          object-fit: contain; }
+        body .page_daccueil .restaurants__bloc--image .tag_nouveau {
+          color: #038868;
+          background-color: #99E2D0;
+          padding: 10px;
+          border-radius: 3px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 10; }
+      body .page_daccueil .restaurants__bloc--description {
+        display: flex; }
+        body .page_daccueil .restaurants__bloc--description .texte {
+          display: flex;
+          flex-direction: column; }
+  body .page_a-la-francaise {
+    display: flex;
+    flex-direction: column; }
+    body .page_a-la-francaise img {
+      max-width: 100%;
+      object-fit: contain; }
+    body .page_a-la-francaise .menu {
+      background-color: #FFFFFF;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      margin-top: -50px;
+      padding: 80px 30px 80px 30px;
+      z-index: 10; }
+      body .page_a-la-francaise .menu .nom_restaurant {
+        background-color: #ffffff;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        margin-top: -50px;
+        min-width: 100%;
+        display: flex;
+        align-items: baseline; }
+        body .page_a-la-francaise .menu .nom_restaurant h2 {
+          font-family: 'Shrikhandregular', sans-serif;
+          width: 100%;
+          font-size: 2.5rem; }
+        body .page_a-la-francaise .menu .nom_restaurant i {
+          font-size: 2.5rem;
+          background-color: #99E2D0;
+          position: relative;
+          right: 30px; }
+      body .page_a-la-francaise .menu__bloc h3 {
+        margin: 5px 0 5px 0; }
+      body .page_a-la-francaise .menu__bloc .ligne_verte {
+        height: 5px;
+        width: 50px;
+        background-color: #99E2D0; }
+  body footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #353535;
+    color: #FFFFFF; }
+    body footer div {
+      font-family: 'Shrikhandregular', sans-serif; }
+    body footer ul {
+      list-style-type: none; }
+
+/*# sourceMappingURL=style.css.map */

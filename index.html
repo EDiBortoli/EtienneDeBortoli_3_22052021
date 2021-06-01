@@ -1,66 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Commande de repas en ligne page d'accueil Ohmyfood">
-    <meta name="keywords" content="HTML, CSS, SCSS">
-    <meta name="author" content="Etienne De Bortoli">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://kit.fontawesome.com/e2647913fd.js" crossorigin="anonymous"></script>
-    <title>Site officiel Ohmyfood!</title>
-</head>
-<body>
-    <header>
-        <img src="img/logo/logo_ohmyfood.png" alt="Logo Ohmyfood">
-    </header>
-    <div class="localisation">
-        <i></i><!-- logo search fontawesome -->
-        <span>Paris, Belleville</span>
-    </div>
-    <section class="presentation">
-        <h2> Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <div class="btn btn_rose">
-            Explorer nos restaurants
-        </div>        
-    </section>
-    <section class="fonctionnement">
-        <h2>Fonctionnement</h2>
-        <div class="btn btn_fonctionnement">
-            <div class="pastille_violette">1</div>
-            <i></i><!-- logo phone fontawesome -->
-            Choisissez un restaurant
-        </div>
-        <div class="btn btn_fonctionnement">
-            <div class="pastille_violette">2</div>
-            <i></i><!-- logo list fontawesome -->
-            Composez votre menu
-        </div>
-        <div class="btn btn_fonctionnement">
-            <div class="pastille_violette">3</div>
-            <i></i><!-- logo shop fontawesome -->
-            Dégustez au restaurant
-        </div>
-    </section>
-    <section class="restaurants">
-        <figure class="photo_restaurants">
-            <img src="img/photos/##">
-            <div class="pastille_verte">
-                Nouveau
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Commande de repas en ligne page d'accueil Ohmyfood">
+        <meta name="keywords" content="HTML, CSS, SCSS">
+        <meta name="author" content="Etienne De Bortoli">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/e2647913fd.js" crossorigin="anonymous"></script>
+        <title>Accueil - Ohmyfood!</title>
+    </head>
+    <body>
+            <header>
+                <img class="logo" src="img/logo/ohmyfood.png" alt="Logo Ohmyfood">
+            </header>
+            <div class="page_daccueil"> 
+                <div class="localisation">
+                    <i class="fas fa-map-marker-alt"></i><!-- logo search fontawesome -->
+                    Paris, Belleville
+                </div>
+                <section class="presentation">
+                    <h2> Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <a href="##">
+                        <div class="btn btn_rose">
+                            Explorer nos restaurants
+                        </div> 
+                    </a>
+                </section>
+                <section class="fonctionnement">
+                    <h2>Fonctionnement</h2>
+                    <div class="btn btn_fonctionnement">
+                        <div class="pastille_violette">1</div>
+                        <i></i><!-- logo phone fontawesome -->
+                        Choisissez un restaurant
+                    </div>
+                    <div class="btn btn_fonctionnement">
+                        <div class="pastille_violette">2</div>
+                        <i></i><!-- logo list fontawesome -->
+                        Composez votre menu
+                    </div>
+                    <div class="btn btn_fonctionnement">
+                        <div class="pastille_violette">3</div>
+                        <i></i><!-- logo shop fontawesome -->
+                        Dégustez au restaurant
+                    </div>
+                </section>
+                <section class="restaurants">
+                    <h2>Restaurants</h2>
+                    <a href="./palette-du-gout.html" class="restaurants__bloc">
+                        <figure class="restaurants__bloc--image">
+                            <img class="image" src="img/restaurant/palette-du-gout.jpg" alt="Photo restaurant la palette du goût">
+                            <div class="tag_nouveau">
+                                Nouveau
+                            </div>
+                        </figure>
+                        <figcaption class="restaurants__bloc--description">
+                            <div class="texte">
+                                <div class="texte_gras">
+                                    <strong>La palette du goût</strong>
+                                </div>
+                                <div class="texte_normal">
+                                    Ménilmontant
+                                </div>
+                            </div>
+                            <div class="coeur">
+                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
+                            </div>
+                        </figcaption>
+                    </a>
+                    <a href="./note-enchantee.html" class="restaurants__bloc">
+                        <figure class="restaurants__bloc--image">
+                            <img class="photo" src="img/restaurant/note-enchantee.jpg" alt="Photo restaurant la note enchantée">
+                            <div class="tag_nouveau">
+                                Nouveau
+                            </div>
+                        </figure>
+                        <figcaption class="restaurants__bloc--description">
+                            <div class="texte">
+                                <div class="texte_gras">
+                                    <strong>La note enchantée</strong>
+                                </div>
+                                <div class="texte_normal">
+                                    Charonne
+                                </div>
+                            </div>
+                            <div class="coeur">
+                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
+                            </div>
+                        </figcaption>
+                    </a>
+                    <a href="./a-la-francaise.html" class="restaurants__bloc">
+                        <figure class="restaurants__bloc--image">
+                            <img class="image" src="img/restaurant/a-la-francaise.jpg" alt="Photo restaurant à la française">
+                            <div class="tag_nouveau">
+                                Nouveau <!--A ne pas mettre-->
+                            </div>
+                        </figure>
+                        <figcaption class="restaurants__bloc--description">
+                            <div class="texte">
+                                <div class="texte_gras">
+                                    <strong>À la française</strong>
+                                </div>
+                                <div class="texte_normal">
+                                    Cité Rouge
+                                </div>
+                            </div>
+                            <div class="coeur">
+                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
+                            </div>
+                        </figcaption>
+                    </a>
+                    <a href="./delice-des-sens.html" class="restaurants__bloc">
+                        <figure class="restaurants__bloc--image">
+                            <img class="image" src="img/restaurant/delice-des-sens.jpg" alt="Photo restaurant le délice des sens">
+                            <div class="tag_nouveau">
+                                Nouveau <!--A ne pas mettre-->
+                            </div>
+                        </figure>
+                        <figcaption class="restaurants__bloc--description">
+                            <div class="texte">
+                                <div class="texte_gras">
+                                    <strong>Le délice des sens</strong>
+                                </div>
+                                <div class="texte_normal">
+                                    Folie-Méricourt
+                                </div>
+                            </div>
+                            <div class="coeur">
+                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
+                            </div>
+                        </figcaption>
+                    </a>
+                </section>
             </div>
-        </figure>
-        <figcaption>
-            <div class="description_restaurants">
-                <span><strong>La palette du goût</strong></span>
-                <span>Ménilmontant></span>
-            </div>
-            <i></i><!-- logo heart fontawesome -->
-        </figcaption>
-
-    </section>
-    <footer>
-
-    </footer>
-</body>
+            <footer>
+                <div>
+                    Ohmyfood
+                </div>
+                <ul>
+                    <li>
+                        <i></i>
+                        Proposer un restaurant
+                    </li>
+                    <li>
+                        <i></i>
+                        Devenir partenaire
+                    </li>
+                    <li>
+                        Mentions légales
+                    </li>
+                    <li>
+                        Contact
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </body>
 </html>

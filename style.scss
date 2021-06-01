@@ -1,0 +1,323 @@
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$padding-page: 25px;
+
+@mixin shadow {
+    box-shadow: 0px 5px 10px #aaaaaa;
+} 
+@mixin radius {
+    border-radius: 30px;
+}
+@mixin padding-general {
+    padding: 50px 25px 50px 25px;
+}
+@mixin centrer-flex-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@mixin hover($color) {
+    @if (hue($color) < 180) {
+        $color: adjust-hue($color, 30);
+    } @else {
+        $color: adjust-hue($color, -60);
+    }
+    background: $color;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('./font/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('./font/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'robotothin';
+    src: url('./font/roboto_thin_macroman/Roboto-Thin-webfont.eot');
+    src: url('./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf') format('truetype');
+    font-weight: thin;
+    font-style: thin;
+
+    font-family: 'robotobold';
+    src: url('./font/roboto_bold_macroman/Roboto-Bold-webfont.eot');
+    src: url('./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+
+    font-family: 'Shrikhandregular';
+    src: url('./font/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'robotoregular', sans-serif;
+    max-width: 450px;
+    margin: 0;
+    padding: 0;
+
+    header {
+        background-color: white;
+        height: 70px;
+        max-width: 100%;
+        @include centrer-flex-wrap;
+        
+        .arrow-left {
+            font-size: 2rem;
+            position: absolute;
+            left:2.5rem;
+        }
+
+        img {
+            width: 50%;
+        }
+    
+    }
+    
+    .page_daccueil{
+        z-index: 1;
+        .localisation{
+            background-color: #EAEAEA;
+            @include centrer-flex-wrap();
+            height: 55px;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: 0px 2px 5px #aaaaaa inset;
+            
+            .fas{
+                position: relative;
+                right: 20px;
+            }
+        }
+        
+        .presentation {
+            background-color: #f6f6f6;
+            @include centrer-flex-wrap();
+            @include padding-general;
+            flex-direction: column;
+            height: 315px;
+            h2{
+                margin: 0;
+                text-align: center;
+                font-weight: bold;
+                font-size: 2.5rem;
+            }
+            p{
+                text-align: center;
+                font-family: 'robotothin', sans-serif;
+                font-size: 2rem;
+            }
+            a{
+                text-decoration: none;
+                color:black;
+                font-weight: normal;
+                .btn {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                }
+                .btn_rose {
+                    cursor: pointer;
+                    padding: 17.5px 30px;
+                    @include radius();
+                    font-size: 1.75rem;
+                    @include shadow;
+                    color: white;
+                    background: $color-secondary;
+                    &:hover {
+                        @include hover($color-secondary);
+                    }
+                }
+            }
+            
+        }
+    
+        .fonctionnement {
+            
+            @include padding-general;
+
+            h2{
+                font-size: 2.5rem;
+            }
+            .btn_fonctionnement {
+                font-size: 1.75rem;
+                background-color: #f6f6f6;
+                display: flex;
+                max-width: 100%;
+                justify-content: center;
+                align-items: baseline;
+                margin: 25px 0;
+                padding-top: 27.5px;
+                padding-bottom: 27.5px;
+                border-radius: 25px;
+                @include shadow;
+
+                .pastille_violette {
+                    background-color: $color-primary;
+                    color: white;
+                    padding: 5px 10px;
+                    font-size: 1.5rem;
+                    border-radius: 30px;
+                    position: relative;
+                    left: -5px;
+                }
+            }
+        }
+        
+        .restaurants {
+            background-color: #f6f6f6;
+            max-width: 100%;
+            @include padding-general;
+            
+            h2{
+                font-size: 2.5rem;
+            }
+            a {
+                max-width: 100px;
+                height: 100px;
+                text-decoration: none;
+                color: black;
+                border-radius: 25px;
+                border: 1px solid black;
+                @include shadow();
+                overflow: hidden;
+            }
+
+            &__bloc {
+                
+    
+                &--image {
+
+                    position: relative;
+                    overflow: hidden;
+
+                    img{
+                        max-width: 100%;
+                        object-fit: contain;
+                    }
+                    .tag_nouveau {
+                        color: #038868;
+                        background-color: $color-tertiary;
+                        padding: 10px;
+                        border-radius: 3px;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        z-index: 10;
+                    }
+                }
+
+                &--description {
+                    display: flex;
+
+                    .texte {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+    
+    .page_a-la-francaise {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .menu {
+            background-color: #FFFFFF;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-top: -50px;
+            padding: 80px 30px 80px 30px;
+            z-index: 10;
+
+            .nom_restaurant {
+                background-color: #ffffff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                margin-top: -50px;
+                min-width: 100%;
+                display: flex;
+                align-items: baseline;
+                h2 {
+                    font-family: 'Shrikhandregular', sans-serif;
+                    width: 100%;
+                    font-size: 2.5rem;
+                }
+    
+                i {
+                    font-size: 2.5rem;
+                    background-color : $color-tertiary;
+                    position: relative;
+                    right: 30px;
+                }
+            }
+
+            &__bloc {
+
+                h3 {
+                    margin: 5px 0 5px 0;
+                }
+                .ligne_verte {
+                    height: 5px;
+                    width: 50px;
+                    background-color : $color-tertiary;
+                }
+                &--description {
+                    .description--texte {
+                        a {
+                            .texte_gras {
+
+                            }
+                            .texte_normal {
+
+                            }
+                            .prix {
+
+                            }
+                            .coche_verte {
+
+                            }
+                        }
+
+                    }  
+                }
+
+            }
+
+
+        }
+
+    }
+
+    footer {
+        width: 100%;
+        margin: 0;
+        padding:0;
+        background-color: #353535;
+        color: #FFFFFF;
+        div {
+            font-family: 'Shrikhandregular', sans-serif;
+        }
+        ul {
+            list-style-type: none;
+        }
+    }
+
+}
