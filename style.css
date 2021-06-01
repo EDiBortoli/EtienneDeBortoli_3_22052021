@@ -1,39 +1,31 @@
 @font-face {
   font-family: 'robotoregular';
-  src: url("./font/roboto_regular_macroman/Roboto-Regular-webfont.eot");
   src: url("./font/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
   font-family: 'robotothin';
-  src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.eot");
   src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype");
-  font-weight: thin;
-  font-style: thin;
   font-family: 'robotobold';
-  src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.eot");
   src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype");
-  font-weight: bold;
-  font-style: bold;
   font-family: 'Shrikhandregular';
-  src: url("./font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  src: url("./font/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); }
 html {
   font-size: 10px; }
 
 body {
   font-family: 'robotoregular', sans-serif;
-  max-width: 450px;
+  max-width: 420px;
   margin: 0;
   padding: 0; }
   body header {
+    position: relative;
     background-color: white;
     height: 70px;
     max-width: 100%;
     align-items: center;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    box-shadow: 0px 15px 10px -15px #aaaaaa;
+    z-index: 50; }
     body header .arrow-left {
       font-size: 2rem;
       position: absolute;
@@ -51,7 +43,8 @@ body {
       height: 55px;
       justify-content: center;
       font-size: 1.75rem;
-      box-shadow: 0px 2px 5px #aaaaaa inset; }
+      z-index: 0;
+      /*box-shadow: 0px 2px 5px #aaaaaa inset;*/ }
       body .page_daccueil .localisation .fas {
         position: relative;
         right: 20px; }
@@ -61,20 +54,26 @@ body {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      padding: 50px 25px 50px 25px;
+      justify-content: start;
+      padding: 0 5rem 0 5rem;
       flex-direction: column;
       height: 315px; }
       body .page_daccueil .presentation h2 {
         margin: 0;
         text-align: center;
         font-weight: bold;
-        font-size: 2.5rem; }
+        font-size: 2.5rem;
+        padding: 5rem 2rem 0rem 2rem; }
       body .page_daccueil .presentation p {
         text-align: center;
         font-family: 'robotothin', sans-serif;
-        font-size: 2rem; }
+        font-weight: lighter;
+        font-size: 1.75rem;
+        margin: 0px;
+        padding: 2rem 0rem 4rem 0rem; }
       body .page_daccueil .presentation a {
         text-decoration: none;
+        height: 2.2rem;
         color: black;
         font-weight: normal; }
         body .page_daccueil .presentation a .btn {
@@ -85,38 +84,50 @@ body {
           flex-wrap: wrap; }
         body .page_daccueil .presentation a .btn_rose {
           cursor: pointer;
-          padding: 17.5px 30px;
+          padding: 1.75rem 3rem;
           border-radius: 30px;
           font-size: 1.75rem;
           box-shadow: 0px 5px 10px #aaaaaa;
           color: white;
-          background: #FF79DA; }
+          background: #FF79DA;
+          background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+          transition: background-color 1000ms; }
           body .page_daccueil .presentation a .btn_rose:hover {
-            background: #9e79ff; }
+            background: #9e79ff;
+            background-color: #9356DC; }
     body .page_daccueil .fonctionnement {
       padding: 50px 25px 50px 25px; }
       body .page_daccueil .fonctionnement h2 {
         font-size: 2.5rem; }
+      body .page_daccueil .fonctionnement a {
+        text-decoration: none;
+        color: black; }
+        body .page_daccueil .fonctionnement a:hover {
+          background-color: #f1e9fb;
+          color: #9356DC; }
       body .page_daccueil .fonctionnement .btn_fonctionnement {
         font-size: 1.75rem;
         background-color: #f6f6f6;
         display: flex;
         max-width: 100%;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
         margin: 25px 0;
         padding-top: 27.5px;
         padding-bottom: 27.5px;
         border-radius: 25px;
         box-shadow: 0px 5px 10px #aaaaaa; }
         body .page_daccueil .fonctionnement .btn_fonctionnement .pastille_violette {
+          position: absolute;
+          left: 1rem;
           background-color: #9356DC;
           color: white;
           padding: 5px 10px;
           font-size: 1.5rem;
-          border-radius: 30px;
-          position: relative;
-          left: -5px; }
+          border-radius: 30px; }
+        body .page_daccueil .fonctionnement .btn_fonctionnement i {
+          position: absolute;
+          left: 7rem; }
     body .page_daccueil .restaurants {
       background-color: #f6f6f6;
       max-width: 100%;
@@ -124,34 +135,38 @@ body {
       body .page_daccueil .restaurants h2 {
         font-size: 2.5rem; }
       body .page_daccueil .restaurants a {
-        max-width: 100px;
-        height: 100px;
+        max-width: 100%;
+        height: 325px;
         text-decoration: none;
         color: black;
         border-radius: 25px;
         border: 1px solid black;
         box-shadow: 0px 5px 10px #aaaaaa;
         overflow: hidden; }
-      body .page_daccueil .restaurants__bloc--image {
-        position: relative;
-        overflow: hidden; }
-        body .page_daccueil .restaurants__bloc--image img {
-          max-width: 100%;
-          object-fit: contain; }
-        body .page_daccueil .restaurants__bloc--image .tag_nouveau {
-          color: #038868;
-          background-color: #99E2D0;
-          padding: 10px;
-          border-radius: 3px;
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          z-index: 10; }
-      body .page_daccueil .restaurants__bloc--description {
-        display: flex; }
-        body .page_daccueil .restaurants__bloc--description .texte {
+      body .page_daccueil .restaurants__bloc {
+        display: flex;
+        flex-direction: column; }
+        body .page_daccueil .restaurants__bloc--image {
+          position: relative; }
+          body .page_daccueil .restaurants__bloc--image img {
+            max-width: 100%;
+            object-fit: contain; }
+          body .page_daccueil .restaurants__bloc--image .tag_nouveau {
+            color: #038868;
+            font-size: 1.15rem;
+            background-color: #99E2D0;
+            padding: 10px;
+            border-radius: 3px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10; }
+        body .page_daccueil .restaurants__bloc--description {
           display: flex;
-          flex-direction: column; }
+          background-color: white; }
+          body .page_daccueil .restaurants__bloc--description .texte {
+            display: flex;
+            flex-direction: column; }
   body .page_a-la-francaise {
     display: flex;
     flex-direction: column; }
