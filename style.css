@@ -239,17 +239,17 @@ body {
   body footer {
     width: 100%;
     margin: 0;
-    padding: 0;
     background-color: #353535;
     color: #FFFFFF;
-    padding: 2.5rem 2.5rem 1.5rem 2.5rem; }
+    padding: 2.5rem 0rem 0.5rem 0rem; }
     body footer div {
       font-family: 'Shrikhandregular', sans-serif;
-      font-size: 1.75rem; }
+      font-size: 1.75rem;
+      padding-left: 2.5rem; }
     body footer ul {
       list-style-type: none;
       font-size: 1.75rem;
-      padding: 0; }
+      padding-left: 2.5rem; }
       body footer ul li {
         padding-bottom: 1rem; }
 
