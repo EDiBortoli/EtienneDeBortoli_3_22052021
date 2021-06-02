@@ -241,10 +241,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: #353535;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem; }
     body footer div {
-      font-family: 'Shrikhandregular', sans-serif; }
+      font-family: 'Shrikhandregular', sans-serif;
+      font-size: 1.75rem; }
     body footer ul {
-      list-style-type: none; }
+      list-style-type: none;
+      font-size: 1.75rem;
+      padding: 0; }
+      body footer ul li {
+        padding-bottom: 1rem; }
 
 /*# sourceMappingURL=style.css.map */
