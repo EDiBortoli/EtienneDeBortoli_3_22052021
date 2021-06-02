@@ -19,6 +19,15 @@ $padding-page: 25px;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+@mixin texte_gras {
+    font-size: 1.85rem ;
+    font-weight: bold;
+}
+
+@mixin texte_light {
+    font-size: 1.7rem;
+    font-weight: lighter;
+}
 
 @mixin hover($color) {
     @if (hue($color) < 180) {
@@ -203,11 +212,10 @@ body {
             }
             a {
                 max-width: 100%;
-                height: 325px;
+                height: 27.5rem;
                 text-decoration: none;
                 color: black;
                 border-radius: 25px;
-                border: 1px solid black;
                 @include shadow();
                 overflow: hidden;
             }
@@ -215,20 +223,26 @@ body {
             &__bloc {
                 display: flex;
                 flex-direction: column;
+                position:relative;
+                bottom: 0;
+                margin: 2rem 0 2rem 0;
     
                 &--image {
 
                     position: relative;
+                    bottom: 0;
+                    width: 100%;
+                    margin: 0;
 
                     img{
                         max-width: 100%;
-                        object-fit: contain;
+                        object-fit: cover;
                     }
                     .tag_nouveau {
                         color: #038868;
-                        font-size: 1.15rem;
+                        font-size: 1.5rem;
                         background-color: $color-tertiary;
-                        padding: 10px;
+                        padding: 0.85rem;
                         border-radius: 3px;
                         position: absolute;
                         top: 20px;
@@ -240,10 +254,34 @@ body {
                 &--description {
                     display: flex;
                     background-color: white;
+                    min-width: 100%;
+                    height: 28%;
+                    position:absolute;
+                    bottom: 0;
+                    z-index: 10;
 
                     .texte {
                         display: flex;
                         flex-direction: column;
+                        width: 100%;
+                        padding: 2rem 0 0 2rem;
+                        font-size: 1.75rem;
+                        .texte_gras {
+                            @include texte_gras();
+                        }
+                        .texte_light {
+                            @include texte_light()
+                        }
+                    }
+                    .coeur {
+                        justify-content: end;
+                    }
+                    i {
+                        font-size: 2.5rem;
+                        font-weight: lighter;
+                        position: relative;
+                        right: 3rem;
+                        top: 2rem;
                     }
                 }
             }
@@ -303,10 +341,10 @@ body {
                     .description--texte {
                         a {
                             .texte_gras {
-
+                                @include texte_gras();
                             }
-                            .texte_normal {
-
+                            .texte_light {
+                                @include texte_light()
                             }
                             .prix {
 
