@@ -31,7 +31,7 @@ body {
       position: absolute;
       left: 2.5rem; }
     body header img {
-      width: 50%; }
+      width: 40%; }
   body .page_daccueil {
     z-index: 1; }
     body .page_daccueil .localisation {
@@ -184,7 +184,7 @@ body {
               font-size: 1.85rem;
               font-weight: bold; }
             body .page_daccueil .restaurants__bloc--description .texte .texte_light {
-              font-size: 1.7rem;
+              font-size: 1.6rem;
               font-weight: lighter; }
           body .page_daccueil .restaurants__bloc--description .coeur {
             justify-content: end; }
@@ -201,14 +201,14 @@ body {
       max-width: 100%;
       object-fit: contain; }
     body .page_a-la-francaise .menu {
-      background-color: #FFFFFF;
+      background-color: #f6f6f6;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
       margin-top: -50px;
-      padding: 80px 30px 80px 30px;
+      padding: 65px 20px 65px 20px;
       z-index: 10; }
       body .page_a-la-francaise .menu .nom_restaurant {
-        background-color: #ffffff;
+        background-color: #f6f6f6;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
         margin-top: -50px;
@@ -218,24 +218,92 @@ body {
         body .page_a-la-francaise .menu .nom_restaurant h2 {
           font-family: 'Shrikhandregular', sans-serif;
           width: 100%;
-          font-size: 2.5rem; }
+          font-size: 3rem; }
         body .page_a-la-francaise .menu .nom_restaurant i {
-          font-size: 2.5rem;
-          background-color: #99E2D0;
+          background-color: #f6f6f6;
+          font-size: 2.75rem;
+          font-weight: lighter;
           position: relative;
-          right: 30px; }
+          right: 20px; }
       body .page_a-la-francaise .menu__bloc h3 {
-        margin: 5px 0 5px 0; }
-      body .page_a-la-francaise .menu__bloc .ligne_verte {
-        height: 5px;
-        width: 50px;
-        background-color: #99E2D0; }
-      body .page_a-la-francaise .menu__bloc--description .description--texte a .texte_gras {
-        font-size: 1.85rem;
-        font-weight: bold; }
-      body .page_a-la-francaise .menu__bloc--description .description--texte a .texte_light {
-        font-size: 1.7rem;
+        margin: 5px 0 5px 0;
+        font-size: 1.5rem;
         font-weight: lighter; }
+      body .page_a-la-francaise .menu__bloc .ligne_verte {
+        height: 0.3rem;
+        width: 4rem;
+        background-color: #99E2D0; }
+      body .page_a-la-francaise .menu__bloc--description {
+        background-color: white;
+        max-width: 100%;
+        border-radius: 15px;
+        box-shadow: 0px 5px 10px #aaaaaa;
+        margin: 1rem 0; }
+        body .page_a-la-francaise .menu__bloc--description a {
+          margin: 1rem 0;
+          text-decoration: none;
+          color: black;
+          align-items: center;
+          display: flex;
+          min-width: 100%;
+          height: 100%; }
+          body .page_a-la-francaise .menu__bloc--description a .btn {
+            display: flex;
+            width: 100%;
+            height: 100%; }
+            body .page_a-la-francaise .menu__bloc--description a .btn .texte {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              font-size: 1.75rem;
+              padding: 1.25rem 0 1.25rem 1.5rem; }
+              body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_gras {
+                font-size: 1.85rem;
+                font-weight: bold;
+                padding: 0 0 0.5rem 0; }
+              body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_light {
+                font-size: 1.6rem;
+                font-weight: lighter; }
+            body .page_a-la-francaise .menu__bloc--description a .btn .prix {
+              display: flex;
+              align-items: flex-end;
+              font-size: 1.6rem;
+              font-weight: bold;
+              padding: 1.25rem 2rem 1.25rem 0; }
+            body .page_a-la-francaise .menu__bloc--description a .btn:not(:hover) + .coche_verte {
+              display: flex; }
+            body .page_a-la-francaise .menu__bloc--description a .btn:hover + .coche_verte {
+              display: flex; }
+          body .page_a-la-francaise .menu__bloc--description a .coche_verte {
+            background-color: #99E2D0;
+            color: #85f6da;
+            font-size: 1.3rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            width: 20%; }
+            body .page_a-la-francaise .menu__bloc--description a .coche_verte i {
+              background-color: white;
+              border-radius: 1rem;
+              padding: 0.4rem; }
+      body .page_a-la-francaise .menu .commande {
+        text-decoration: none;
+        align-items: center; }
+        body .page_a-la-francaise .menu .commande .btn_rose {
+          cursor: pointer;
+          padding: 1.75rem 3rem;
+          margin-top: 2rem;
+          border-radius: 30px;
+          font-size: 1.75rem;
+          box-shadow: 0px 5px 10px #aaaaaa;
+          color: white;
+          background: #FF79DA;
+          background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+          transition: background-color 1000ms; }
+          body .page_a-la-francaise .menu .commande .btn_rose:hover {
+            background: #9e79ff;
+            background-color: #9356DC; }
   body footer {
     width: 100%;
     margin: 0;

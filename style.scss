@@ -25,7 +25,7 @@ $padding-page: 25px;
 }
 
 @mixin texte_light {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: lighter;
 }
 
@@ -82,7 +82,7 @@ body {
         }
 
         img {
-            width: 50%;
+            width: 40%;
         }
     
     }
@@ -298,15 +298,15 @@ body {
         }
 
         .menu {
-            background-color: #FFFFFF;
+            background-color: #f6f6f6;
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
             margin-top: -50px;
-            padding: 80px 30px 80px 30px;
+            padding: 65px 20px 65px 20px;
             z-index: 10;
 
             .nom_restaurant {
-                background-color: #ffffff;
+                background-color: #f6f6f6;
                 border-top-left-radius: 50px;
                 border-top-right-radius: 50px;
                 margin-top: -50px;
@@ -316,14 +316,15 @@ body {
                 h2 {
                     font-family: 'Shrikhandregular', sans-serif;
                     width: 100%;
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                 }
     
                 i {
-                    font-size: 2.5rem;
-                    background-color : $color-tertiary;
+                    background-color: #f6f6f6;
+                    font-size: 2.75rem;
+                    font-weight: lighter;
                     position: relative;
-                    right: 30px;
+                    right: 20px;
                 }
             }
 
@@ -331,37 +332,102 @@ body {
 
                 h3 {
                     margin: 5px 0 5px 0;
+                    font-size: 1.5rem;
+                    font-weight: lighter;
                 }
                 .ligne_verte {
-                    height: 5px;
-                    width: 50px;
+                    height: 0.3rem;
+                    width: 4rem;
                     background-color : $color-tertiary;
                 }
                 &--description {
-                    .description--texte {
-                        a {
-                            .texte_gras {
-                                @include texte_gras();
-                            }
-                            .texte_light {
-                                @include texte_light()
+                    background-color: white;
+                    max-width: 100%;
+                    border-radius: 15px;
+                    @include shadow();
+                    margin: 1rem 0;
+                    a {
+                        margin: 1rem 0;
+                        text-decoration: none;
+                        color: black;
+                        align-items: center;
+                        display: flex;
+                        min-width: 100%;
+                        height: 100%;
+                        .btn {
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            .texte {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                font-size: 1.75rem;
+                                padding: 1.25rem 0 1.25rem 1.5rem;
+                                .texte_gras {
+                                    @include texte_gras();
+                                    padding: 0 0 0.5rem 0;
+                                }
+                                .texte_light {
+                                    @include texte_light()
+                                }
                             }
                             .prix {
-
+                                display: flex;
+                                align-items: flex-end;
+                                font-size: 1.6rem;
+                                font-weight: bold;
+                                padding: 1.25rem 2rem 1.25rem 0;
                             }
-                            .coche_verte {
-
+                            &:not(:hover) + .coche_verte {
+                                display: flex;
+                            }
+                            &:hover + .coche_verte {
+                                display: flex;
                             }
                         }
-
-                    }  
+                        .coche_verte {
+                            background-color: $color-tertiary;
+                            color:adjust-color($color: $color-tertiary, $saturation: 30%);
+                            font-size: 1.3rem;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            min-height: 100%;
+                            width: 20%;
+                            
+                            i {
+                                background-color: white;
+                                border-radius: 1rem;
+                                padding: 0.4rem;
+                            }
+                        }
+                    }
                 }
-
             }
 
-
+            .commande {
+                text-decoration: none;
+                align-items: center;
+                .btn_rose {
+                    cursor: pointer;
+                    padding: 1.75rem 3rem;
+                    margin-top: 2rem;
+                    @include radius();
+                    font-size: 1.75rem;
+                    @include shadow;
+                    color: white;
+                    background: $color-secondary;
+                    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+                    transition: background-color 1000ms;
+                    &:hover {
+                        @include hover($color-secondary);
+                        background-color: $color-primary;
+                    }
+                }
+            }
+            
         }
-
     }
 
     footer {
@@ -384,5 +450,4 @@ body {
             }
         }
     }
-
 }
