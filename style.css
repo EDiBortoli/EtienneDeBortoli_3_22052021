@@ -1,3 +1,28 @@
+@keyframes menu-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+@keyframes coche {
+  from {
+    right: 0px; }
+  to {
+    right: 40px;
+    background-color: #99E2D0; } }
+@keyframes hover-coche {
+  0% {
+    transform: scale(1) translate(50px) rotate(-640deg); }
+  50% {
+    transform: scale(1.1) translate(0px) rotate(30deg); }
+  100% {
+    transform: scale(1) translate(0px) rotate(0deg); } }
+@keyframes unhover-coche {
+  0% {
+    transform: translate(0px) rotate(0deg); }
+  100% {
+    transform: translate(50px) rotate(0deg); } }
 @font-face {
   font-family: 'robotoregular';
   src: url("./font/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
@@ -226,71 +251,109 @@ body {
           font-weight: lighter;
           position: relative;
           right: 20px; }
-      body .page_a-la-francaise .menu__bloc h3 {
-        margin: 5px 0 5px 0;
-        font-size: 1.5rem;
-        font-weight: lighter; }
-      body .page_a-la-francaise .menu__bloc .ligne_verte {
-        height: 0.3rem;
-        width: 4rem;
-        background-color: #99E2D0; }
-      body .page_a-la-francaise .menu__bloc--description {
-        background-color: white;
-        max-width: 100%;
-        border-radius: 15px;
-        box-shadow: 0px 5px 10px #aaaaaa;
-        margin: 1rem 0; }
-        body .page_a-la-francaise .menu__bloc--description a {
-          text-decoration: none;
-          color: black;
-          align-items: center;
-          display: flex;
-          min-width: 3rem;
-          height: 100%; }
-          body .page_a-la-francaise .menu__bloc--description a .btn {
+      body .page_a-la-francaise .menu__bloc {
+        margin-bottom: 3.5rem; }
+        body .page_a-la-francaise .menu__bloc h3 {
+          margin: 5px 0 5px 0;
+          font-size: 1.5rem;
+          font-weight: lighter;
+          animation: menu-anim 0.5s ease forwards; }
+        body .page_a-la-francaise .menu__bloc .ligne_verte {
+          height: 0.3rem;
+          width: 4rem;
+          background-color: #99E2D0;
+          animation: menu-anim 0.5s ease forwards; }
+        body .page_a-la-francaise .menu__bloc--description {
+          background-color: white;
+          max-width: 100%;
+          border-radius: 15px;
+          box-shadow: 0px 5px 10px #aaaaaa;
+          margin: 1.5rem 0;
+          overflow: hidden;
+          max-height: 7.5rem; }
+          body .page_a-la-francaise .menu__bloc--description:nth-child(1) {
+            animation: menu-anim 0.5s ease forwards; }
+          body .page_a-la-francaise .menu__bloc--description:nth-child(2) {
+            animation: menu-anim 1s ease forwards; }
+          body .page_a-la-francaise .menu__bloc--description:nth-child(3) {
+            animation: menu-anim 1.5s ease forwards; }
+          body .page_a-la-francaise .menu__bloc--description:nth-child(4) {
+            animation: menu-anim 2s ease forwards; }
+          body .page_a-la-francaise .menu__bloc--description:nth-child(5) {
+            animation: menu-anim 2.5s ease forwards; }
+          body .page_a-la-francaise .menu__bloc--description a {
+            text-decoration: none;
+            color: black;
+            align-items: center;
             display: flex;
-            width: 100%;
-            height: 100%; }
-            body .page_a-la-francaise .menu__bloc--description a .btn .texte {
+            min-width: 3rem;
+            height: 100%;
+            overflow: hidden; }
+            body .page_a-la-francaise .menu__bloc--description a .btn {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              max-height: 100%; }
+              body .page_a-la-francaise .menu__bloc--description a .btn .texte {
+                display: flex;
+                flex-direction: column;
+                width: 75%;
+                max-height: 100%;
+                font-size: 1.75rem;
+                padding: 1.25rem 0 1.25rem 1.5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap; }
+                body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_gras {
+                  font-size: 1.85rem;
+                  font-weight: bold;
+                  padding: 0 0 0.5rem 0; }
+                body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_light {
+                  font-size: 1.6rem;
+                  font-weight: lighter;
+                  white-space: nowrap;
+                  text-overflow: ellipsis; }
+              body .page_a-la-francaise .menu__bloc--description a .btn .prix {
+                display: flex;
+                align-items: flex-end;
+                font-size: 1.6rem;
+                font-weight: bold;
+                padding: 1.25rem 2rem 1.25rem 0; }
+              body .page_a-la-francaise .menu__bloc--description a .btn:not(:hover) + .coche_verte {
+                display: none;
+                width: 0px; }
+              body .page_a-la-francaise .menu__bloc--description a .btn:hover + .coche_verte {
+                display: flex;
+                padding: 0.5rem 4rem;
+                background-color: #99E2D0;
+                position: relative;
+                animation: coche 3s;
+                animation-fill-mode: forwards;
+                transition-duration: 3s; }
+                body .page_a-la-francaise .menu__bloc--description a .btn:hover + .coche_verte i {
+                  background-color: white;
+                  border-radius: 1rem;
+                  padding: 0.4rem;
+                  transform: rotate(0deg);
+                  transition: transform 500ms 250ms ease-in-out; }
+            body .page_a-la-francaise .menu__bloc--description a .coche_verte {
               display: flex;
               flex-direction: column;
-              width: 100%;
-              max-height: 4.4rem;
-              font-size: 1.75rem;
-              padding: 1.25rem 0 1.25rem 1.5rem; }
-              body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_gras {
-                font-size: 1.85rem;
-                font-weight: bold;
-                padding: 0 0 0.5rem 0; }
-              body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_light {
-                font-size: 1.6rem;
-                font-weight: lighter;
-                display: inline-block;
-                white-space: nowrap;
-                text-overflow: ellipsis; }
-            body .page_a-la-francaise .menu__bloc--description a .btn .prix {
-              display: flex;
-              align-items: flex-end;
-              font-size: 1.6rem;
-              font-weight: bold;
-              padding: 1.25rem 2rem 1.25rem 0; }
-            body .page_a-la-francaise .menu__bloc--description a .btn:not(:hover) + .coche_verte {
-              display: flex; }
-            body .page_a-la-francaise .menu__bloc--description a .btn:hover + .coche_verte {
-              display: flex; }
-          body .page_a-la-francaise .menu__bloc--description a .coche_verte {
-            background-color: #99E2D0;
-            color: #99E2D0;
-            font-size: 1.3rem;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            min-height: 100%;
-            min-width: 20%; }
-            body .page_a-la-francaise .menu__bloc--description a .coche_verte i {
-              background-color: white;
-              border-radius: 1rem;
-              padding: 0.4rem; }
+              background-color: #99E2D0;
+              color: #99E2D0;
+              font-size: 1.3rem;
+              justify-content: center;
+              align-items: center;
+              height: 7rem;
+              width: 0px;
+              border-radius: 0px 2rem 2rem 0px; }
+              body .page_a-la-francaise .menu__bloc--description a .coche_verte i {
+                background-color: white;
+                border-radius: 1rem;
+                padding: 0.4rem;
+                transform: rotate(360deg);
+                transition: transform 500ms 250ms ease-in-out; }
       body .page_a-la-francaise .menu .commande {
         text-decoration: none;
         align-items: center; }
