@@ -33,18 +33,25 @@ $padding-page: 25px;
     font-weight: lighter;
 }
 
-@mixin hover($color) {
-    @if (hue($color) < 180) {
-        $color: adjust-hue($color, 30);
-    } @else {
-        $color: adjust-hue($color, -60);
-    }
-    background: $color;
-}
-
 @mixin background-opacity($color) {
     background-color: adjust-color($color, $hue: 0, $saturation: 5%, $lightness: 35%);
 }
+
+@keyframes degraded-color {
+    0% {
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    }
+    30% {
+        background: linear-gradient(0deg, rgba(147,86,220,1) 33%, rgba(255,121,218,1) 100%);
+    }
+    50%{
+        background: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 47%);
+    }
+    100% {
+        background: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    }
+}
+
 
 @keyframes menu-anim {
     0% {
@@ -80,16 +87,23 @@ $padding-page: 25px;
 @font-face {
     font-family: 'robotoregular';
     src: url('./font/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype');
-
+    font-style: normal;
+}
+@font-face {
     font-family: 'robotothin';
     src: url('./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf') format('truetype');
+    font-style: thin;
+}
 
+@font-face {
     font-family: 'robotobold';
     src: url('./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype');
+    font-style: bold;
+}
 
+@font-face {
     font-family: 'Shrikhandregular';
     src: url('./font/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
-
 }
 
 html {
@@ -148,6 +162,7 @@ body {
             flex-direction: column;
             height: 315px;
             h2{
+                font-family: "robotobold", sans-serif;
                 margin: 0;
                 text-align: center;
                 font-weight: bold;
@@ -157,7 +172,6 @@ body {
             p{
                 text-align: center;
                 font-family: 'robotothin', sans-serif;
-                font-weight: lighter;
                 font-size: 1.75rem;
                 margin: 0px;
                 padding: 2rem 0rem 4rem 0rem;
@@ -182,8 +196,7 @@ body {
                     background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
                     transition: background-color 1000ms;
                     &:hover {
-                        @include hover($color-secondary);
-                        background-color: $color-primary;
+                        animation: degraded-color 0.2s forwards;
                     }
                 }
             }
@@ -352,13 +365,21 @@ body {
                     font-size: 3rem;
                 }
     
-                i {
+                /*i {
                     background-color: #f6f6f6;
                     font-size: 2.75rem;
                     font-weight: lighter;
                     position: relative;
                     right: 20px;
-                }
+                }*/
+
+                svg {
+                    /* gradient and fallback color */
+                    fill: url(#heart-gradient) #447799;
+
+                    .stop1 { stop-color: rgba(147,86,220,1); }
+                    .stop2 { stop-color: rgba(255,121,218,1); }
+                  }
             }
 
             &__bloc {
@@ -414,6 +435,16 @@ body {
                         overflow: hidden;
                         height: 6.8rem;
 
+                        &:not(:hover) > .coche_verte {   
+                            animation: unhover-coche 1.5s forwards; 
+                        }
+                        &:hover > .coche_verte {
+                            width: 7rem;
+                            i{
+                                animation: hover-coche 1.5s forwards;
+                            }
+                        }
+
                         .btn {
                             display: flex;
                             flex-direction: row;
@@ -437,11 +468,15 @@ body {
                                 .texte_gras {
                                     @include texte_gras();
                                     padding: 0 0 0.5rem 0;
+                                    overflow: hidden;
+                                    white-space:nowrap;
+                                    text-overflow: ellipsis;
 
                                 }
                                 .texte_light {
                                     @include texte_light();
                                     display: inline-block;
+                                    overflow: hidden;
                                     white-space:nowrap;
                                     text-overflow: ellipsis;
                                 }
@@ -457,15 +492,7 @@ body {
                                 padding: 1.25rem 2rem 1.25rem 0;
                             }
 
-                            &:not(:hover) + .coche_verte {   
-                                animation: unhover-coche 1.5s forwards; 
-                            }
-                            &:hover + .coche_verte {
-                                width: 7rem;
-                                i{
-                                    animation: hover-coche 1.5s forwards;
-                                }
-                            }
+                            
                         }
                         .coche_verte {
                             display: flex;
@@ -478,7 +505,7 @@ body {
                             height: 7rem;
                             width: 0px;
                             border-radius: 0px 1.5rem 1.5rem 0px;
-                            transition: width 0.4s;
+                            transition: width 0.4s ease-in;
 
                             i {
                                 background-color: white;
@@ -510,8 +537,7 @@ body {
                     background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
                     transition: background-color 1000ms;
                     &:hover {
-                        @include hover($color-secondary);
-                        background-color: $color-primary;
+                        animation: degraded-color 0.2s forwards;
                     }
                 }
             }

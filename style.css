@@ -1,3 +1,12 @@
+@keyframes degraded-color {
+  0% {
+    background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%); }
+  30% {
+    background: linear-gradient(0deg, #9356dc 33%, #ff79da 100%); }
+  50% {
+    background: linear-gradient(0deg, #ff79da 0%, #9356dc 47%); }
+  100% {
+    background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%); } }
 @keyframes menu-anim {
   0% {
     opacity: 0;
@@ -20,10 +29,16 @@
 @font-face {
   font-family: 'robotoregular';
   src: url("./font/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
+  font-style: normal; }
+@font-face {
   font-family: 'robotothin';
   src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype");
+  font-style: thin; }
+@font-face {
   font-family: 'robotobold';
   src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype");
+  font-style: bold; }
+@font-face {
   font-family: 'Shrikhandregular';
   src: url("./font/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); }
 html {
@@ -79,6 +94,7 @@ body {
       flex-direction: column;
       height: 315px; }
       body .page_daccueil .presentation h2 {
+        font-family: "robotobold", sans-serif;
         margin: 0;
         text-align: center;
         font-weight: bold;
@@ -87,7 +103,6 @@ body {
       body .page_daccueil .presentation p {
         text-align: center;
         font-family: 'robotothin', sans-serif;
-        font-weight: lighter;
         font-size: 1.75rem;
         margin: 0px;
         padding: 2rem 0rem 4rem 0rem; }
@@ -113,8 +128,7 @@ body {
           background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
           transition: background-color 1000ms; }
           body .page_daccueil .presentation a .btn_rose:hover {
-            background: #9e79ff;
-            background-color: #9356DC; }
+            animation: degraded-color 0.2s forwards; }
     body .page_daccueil .fonctionnement {
       padding: 50px 25px 50px 25px; }
       body .page_daccueil .fonctionnement h2 {
@@ -234,17 +248,25 @@ body {
         margin-top: -50px;
         min-width: 100%;
         display: flex;
-        align-items: baseline; }
+        align-items: baseline;
+        /*i {
+            background-color: #f6f6f6;
+            font-size: 2.75rem;
+            font-weight: lighter;
+            position: relative;
+            right: 20px;
+        }*/ }
         body .page_a-la-francaise .menu .nom_restaurant h2 {
           font-family: 'Shrikhandregular', sans-serif;
           width: 100%;
           font-size: 3rem; }
-        body .page_a-la-francaise .menu .nom_restaurant i {
-          background-color: #f6f6f6;
-          font-size: 2.75rem;
-          font-weight: lighter;
-          position: relative;
-          right: 20px; }
+        body .page_a-la-francaise .menu .nom_restaurant svg {
+          /* gradient and fallback color */
+          fill: url(#heart-gradient) #447799; }
+          body .page_a-la-francaise .menu .nom_restaurant svg .stop1 {
+            stop-color: #9356dc; }
+          body .page_a-la-francaise .menu .nom_restaurant svg .stop2 {
+            stop-color: #ff79da; }
       body .page_a-la-francaise .menu__bloc {
         margin-bottom: 3.5rem; }
         body .page_a-la-francaise .menu__bloc h3 {
@@ -284,6 +306,12 @@ body {
             background-color: white;
             overflow: hidden;
             height: 6.8rem; }
+            body .page_a-la-francaise .menu__bloc--description a:not(:hover) > .coche_verte {
+              animation: unhover-coche 1.5s forwards; }
+            body .page_a-la-francaise .menu__bloc--description a:hover > .coche_verte {
+              width: 7rem; }
+              body .page_a-la-francaise .menu__bloc--description a:hover > .coche_verte i {
+                animation: hover-coche 1.5s forwards; }
             body .page_a-la-francaise .menu__bloc--description a .btn {
               display: flex;
               flex-direction: row;
@@ -305,11 +333,15 @@ body {
                 body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_gras {
                   font-size: 1.85rem;
                   font-weight: bold;
-                  padding: 0 0 0.5rem 0; }
+                  padding: 0 0 0.5rem 0;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis; }
                 body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_light {
                   font-size: 1.6rem;
                   font-weight: lighter;
                   display: inline-block;
+                  overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
               body .page_a-la-francaise .menu__bloc--description a .btn .prix {
@@ -319,12 +351,6 @@ body {
                 font-size: 1.6rem;
                 font-weight: bold;
                 padding: 1.25rem 2rem 1.25rem 0; }
-              body .page_a-la-francaise .menu__bloc--description a .btn:not(:hover) + .coche_verte {
-                animation: unhover-coche 1.5s forwards; }
-              body .page_a-la-francaise .menu__bloc--description a .btn:hover + .coche_verte {
-                width: 7rem; }
-                body .page_a-la-francaise .menu__bloc--description a .btn:hover + .coche_verte i {
-                  animation: hover-coche 1.5s forwards; }
             body .page_a-la-francaise .menu__bloc--description a .coche_verte {
               display: flex;
               flex-direction: row;
@@ -336,7 +362,7 @@ body {
               height: 7rem;
               width: 0px;
               border-radius: 0px 1.5rem 1.5rem 0px;
-              transition: width 0.4s; }
+              transition: width 0.4s ease-in; }
               body .page_a-la-francaise .menu__bloc--description a .coche_verte i {
                 background-color: white;
                 display: inline-block;
@@ -360,8 +386,7 @@ body {
           background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
           transition: background-color 1000ms; }
           body .page_a-la-francaise .menu .commande .btn_rose:hover {
-            background: #9e79ff;
-            background-color: #9356DC; }
+            animation: degraded-color 0.2s forwards; }
   body footer {
     width: 100%;
     margin: 0;
