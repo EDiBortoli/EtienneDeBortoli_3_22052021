@@ -374,11 +374,18 @@ body {
                 }*/
 
                 svg {
-                    /* gradient and fallback color */
-                    fill: url(#heart-gradient) #447799;
+                    position: relative;
+                    bottom: -5px;
+                    right: 10px;
+                    fill: none;
 
-                    .stop1 { stop-color: rgba(147,86,220,1); }
-                    .stop2 { stop-color: rgba(255,121,218,1); }
+                    &:hover {
+                        /* gradient and fallback color */
+                        fill: url(#heart-gradient);
+                        cursor: pointer;
+                        .stop1 { stop-color: rgba(147,86,220,1); }
+                        .stop2 { stop-color: rgba(255,121,218,1); }
+                    }
                   }
             }
 

@@ -261,12 +261,18 @@ body {
           width: 100%;
           font-size: 3rem; }
         body .page_a-la-francaise .menu .nom_restaurant svg {
-          /* gradient and fallback color */
-          fill: url(#heart-gradient) #447799; }
-          body .page_a-la-francaise .menu .nom_restaurant svg .stop1 {
-            stop-color: #9356dc; }
-          body .page_a-la-francaise .menu .nom_restaurant svg .stop2 {
-            stop-color: #ff79da; }
+          position: relative;
+          bottom: -5px;
+          right: 10px;
+          fill: none; }
+          body .page_a-la-francaise .menu .nom_restaurant svg:hover {
+            /* gradient and fallback color */
+            fill: url(#heart-gradient);
+            cursor: pointer; }
+            body .page_a-la-francaise .menu .nom_restaurant svg:hover .stop1 {
+              stop-color: #9356dc; }
+            body .page_a-la-francaise .menu .nom_restaurant svg:hover .stop2 {
+              stop-color: #ff79da; }
       body .page_a-la-francaise .menu__bloc {
         margin-bottom: 3.5rem; }
         body .page_a-la-francaise .menu__bloc h3 {
