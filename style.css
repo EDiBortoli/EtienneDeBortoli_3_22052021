@@ -334,10 +334,6 @@ body {
                 cursor: pointer;
                 stroke: none;
                 animation: hover-coeur 0.8s ease-in-out; }
-                body .page_daccueil .restaurants__bloc--description .coeur svg:hover .stop1 {
-                  stop-color: #ff79da; }
-                body .page_daccueil .restaurants__bloc--description .coeur svg:hover .stop2 {
-                  stop-color: #9356dc; }
   body .page_a-la-francaise {
     display: flex;
     flex-direction: column; }

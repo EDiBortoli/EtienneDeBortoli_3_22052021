@@ -476,8 +476,7 @@ body {
                                 fill: url(#heart-gradient);
                                 cursor: pointer;
                                 stroke: none;
-                                .stop1 { stop-color: rgba(255,121,218,1); }
-                                .stop2 { stop-color: rgba(147,86,220,1); }
+                                
                                 animation: hover-coeur 0.8s ease-in-out;
                             }
                         }
