@@ -2,167 +2,211 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Commande de repas en ligne page d'accueil Ohmyfood">
-        <meta name="keywords" content="HTML, CSS, SCSS">
-        <meta name="author" content="Etienne De Bortoli">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://kit.fontawesome.com/e2647913fd.js" crossorigin="anonymous"></script>
         <title>Accueil - Ohmyfood!</title>
+        <meta name="title" content="Accueil - ohmyfood!">
+        <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants.">
+        <meta name="keywords" content="HTML, CSS, SCSS">
+        <meta name="author" content="Etienne De Bortoli">
     </head>
     <body>
-            <header>
-                <img class="logo" src="img/logo/ohmyfood.png" alt="Logo Ohmyfood">
-            </header>
-            <div class="page_daccueil"> 
-                <div class="localisation">
-                    <i class="fas fa-map-marker-alt"></i><!-- logo search fontawesome -->
-                    Paris, Belleville
-                </div>
-                <section class="presentation">
-                    <h2> Réservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <a href="##">
-                        <div class="btn btn_rose">
-                            Explorer nos restaurants
-                        </div> 
-                    </a>
-                </section>
-                <section class="fonctionnement">
-                    <h2>Fonctionnement</h2>
-                    <a href="##" class="btn btn_fonctionnement">
-                        <div class="pastille_violette">1</div>
-                        <i class="fas fa-mobile-alt"></i><!-- logo phone fontawesome -->
-                        Choisissez un restaurant
-                    </a>
-                    <a href="##" class="btn btn_fonctionnement">
-                        <div class="pastille_violette">2</div>
-                        <i class="fas fa-list-ul"></i><!-- logo list fontawesome -->
-                        Composez votre menu
-                    </a>
-                    <a href="##" class="btn btn_fonctionnement">
-                        <div class="pastille_violette">3</div>
-                        <i class="fas fa-store"></i><!-- logo store fontawesome -->
-                        Dégustez au restaurant
-                    </a>
-                </section>
-                <section class="restaurants">
-                    <h2>Restaurants</h2>
-                    <a href="./palette-du-gout.html" class="restaurants__bloc">
-                        <figure class="restaurants__bloc--image">
-                            <img class="image" src="img/restaurant/palette-du-gout.jpg" alt="Photo restaurant la palette du goût">
-                            <div class="tag_nouveau">
-                                Nouveau
-                            </div>
-                        </figure>
-                        <figcaption class="restaurants__bloc--description">
-                            <div class="texte">
-                                <div class="texte_gras">
-                                    <strong>La palette du goût</strong>
-                                </div>
-                                <div class="texte_light">
-                                    Ménilmontant
-                                </div>
-                            </div>
-                            <div class="coeur">
-                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
-                            </div>
-                        </figcaption>
-                    </a>
-                    <a href="./note-enchantee.html" class="restaurants__bloc">
-                        <figure class="restaurants__bloc--image">
-                            <img class="photo" src="img/restaurant/note-enchantee.jpg" alt="Photo restaurant la note enchantée">
-                            <div class="tag_nouveau">
-                                Nouveau
-                            </div>
-                        </figure>
-                        <figcaption class="restaurants__bloc--description">
-                            <div class="texte">
-                                <div class="texte_gras">
-                                    <strong>La note enchantée</strong>
-                                </div>
-                                <div class="texte_light">
-                                    Charonne
-                                </div>
-                            </div>
-                            <div class="coeur">
-                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
-                            </div>
-                        </figcaption>
-                    </a>
-                    <a href="./a-la-francaise.html" class="restaurants__bloc">
-                        <figure class="restaurants__bloc--image">
-                            <img class="image" src="img/restaurant/a-la-francaise.jpg" alt="Photo restaurant à la française">
-                            <div class="tag_nouveau">
-                                Nouveau <!--A ne pas mettre-->
-                            </div>
-                        </figure>
-                        <figcaption class="restaurants__bloc--description">
-                            <div class="texte">
-                                <div class="texte_gras">
-                                    <strong>À la française</strong>
-                                </div>
-                                <div class="texte_light">
-                                    Cité Rouge
-                                </div>
-                            </div>
-                            <div class="coeur">
-                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
-                            </div>
-                        </figcaption>
-                    </a>
-                    <a href="./delice-des-sens.html" class="restaurants__bloc">
-                        <figure class="restaurants__bloc--image">
-                            <img class="image" src="img/restaurant/delice-des-sens.jpg" alt="Photo restaurant le délice des sens">
-                            <div class="tag_nouveau">
-                                Nouveau <!--A ne pas mettre-->
-                            </div>
-                        </figure>
-                        <figcaption class="restaurants__bloc--description">
-                            <div class="texte">
-                                <div class="texte_gras">
-                                    <strong>Le délice des sens</strong>
-                                </div>
-                                <div class="texte_light">
-                                    Folie-Méricourt
-                                </div>
-                            </div>
-                            <div class="coeur">
-                                <i class="far fa-heart"></i><!-- logo heart fontawesome -->
-                            </div>
-                        </figcaption>
-                    </a>
-                </section>
+        <div class="loader">
+            <div class="loader__letter">
+                <div class="loader__letter--1">o</div>
+                <div class="loader__letter--2">h</div>
+                <div class="loader__letter--3">m</div>
+                <div class="loader__letter--4">y</div>
+                <div class="loader__letter--5">f</div>
+                <div class="loader__letter--6">o</div>
+                <div class="loader__letter--7">o</div>
+                <div class="loader__letter--8">d</div>
             </div>
-            <footer>
-                <div>
-                    Ohmyfood
-                </div>
-                <ul>
-                    <li>
-                        <a href="##">
-                            <i class="fas fa-utensils"></i>
-                            Proposer un restaurant
-                        </a>
-                    </li>
-                    <li>
-                        <a href="##">
-                            <i class="fas fa-hands-helping"></i>
-                            Devenir partenaire
-                        </a>
-                    </li>
-                    <li>
-                        <a href="##">
-                            Mentions légales
-                        </a>
-                    </li>
-                    <li>
-                        <a href="##">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </footer>
+            <div class="loader__spinner">
+                <svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="load one" cx="60" cy="60" r="40" />
+                  <circle class="load two" cx="60" cy="60" r="40" />
+                  <circle class="load three" cx="60" cy="60" r="40" />
+                  <g>
+                    <circle class="point one" cx="45" cy="70" r="5" />
+                    <circle class="point two" cx="60" cy="70" r="5" />
+                    <circle class="point three" cx="75" cy="70" r="5" />
+                  </g>
+                </svg>
+              </div>
         </div>
+        <header>
+            <img class="logo" src="img/logo/ohmyfood.png" alt="Logo Ohmyfood">
+        </header>
+        <div class="page_daccueil"> 
+            <div class="localisation">
+                <i class="fas fa-map-marker-alt"></i><!-- logo search fontawesome -->
+                Paris, Belleville
+            </div>
+            <section class="presentation">
+                <h2> Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <a href="##">
+                    <div class="btn btn_rose">
+                        Explorer nos restaurants
+                    </div> 
+                </a>
+            </section>
+            <section class="fonctionnement">
+                <h2>Fonctionnement</h2>
+                <a href="##" class="btn btn_fonctionnement">
+                    <div class="pastille_violette">1</div>
+                    <i class="fas fa-mobile-alt"></i><!-- logo phone fontawesome -->
+                    Choisissez un restaurant
+                </a>
+                <a href="##" class="btn btn_fonctionnement">
+                    <div class="pastille_violette">2</div>
+                    <i class="fas fa-list-ul"></i><!-- logo list fontawesome -->
+                    Composez votre menu
+                </a>
+                <a href="##" class="btn btn_fonctionnement">
+                    <div class="pastille_violette">3</div>
+                    <i class="fas fa-store"></i><!-- logo store fontawesome -->
+                    Dégustez au restaurant
+                </a>
+            </section>
+            <section class="restaurants">
+                <h2>Restaurants</h2>
+                <a href="./palette-du-gout.html" class="restaurants__bloc">
+                    <figure class="restaurants__bloc--image">
+                        <img class="image" src="img/restaurant/palette-du-gout.jpg" alt="Photo restaurant la palette du goût">
+                        <div class="tag_nouveau">
+                            Nouveau
+                        </div>
+                    </figure>
+                    <figcaption class="restaurants__bloc--description">
+                        <div class="texte">
+                            <div class="texte_gras">
+                                <strong>La palette du goût</strong>
+                            </div>
+                            <div class="texte_light">
+                                Ménilmontant
+                            </div>
+                        </div>
+                        <div class="coeur">
+                            <svg width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                <defs>
+                                    <linearGradient id="heart-gradient" x1="0" x2="0" y1="1" y2="0">
+                                    <stop class="stop1" offset="0%"/>
+                                    <stop class="stop2" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg> <!--logo heart svg-->
+                        </div>
+                    </figcaption>
+                </a>
+                <a href="./note-enchantee.html" class="restaurants__bloc">
+                    <figure class="restaurants__bloc--image">
+                        <img class="photo" src="img/restaurant/note-enchantee.jpg" alt="Photo restaurant la note enchantée">
+                        <div class="tag_nouveau">
+                            Nouveau
+                        </div>
+                    </figure>
+                    <figcaption class="restaurants__bloc--description">
+                        <div class="texte">
+                            <div class="texte_gras">
+                                <strong>La note enchantée</strong>
+                            </div>
+                            <div class="texte_light">
+                                Charonne
+                            </div>
+                        </div>
+                        <div class="coeur">
+                            <svg width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                <defs>
+                                    <linearGradient id="heart-gradient" x1="0" x2="0" y1="1" y2="0">
+                                    <stop class="stop1" offset="0%"/>
+                                    <stop class="stop2" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg> <!--logo heart svg-->
+                        </div>
+                    </figcaption>
+                </a>
+                <a href="./a-la-francaise.html" class="restaurants__bloc">
+                    <figure class="restaurants__bloc--image">
+                        <img class="image" src="img/restaurant/a-la-francaise.jpg" alt="Photo restaurant à la française">
+                        <!--<div class="tag_nouveau">
+                            Nouveau
+                        </div>-->
+                    </figure>
+                    <figcaption class="restaurants__bloc--description">
+                        <div class="texte">
+                            <div class="texte_gras">
+                                <strong>À la française</strong>
+                            </div>
+                            <div class="texte_light">
+                                Cité Rouge
+                            </div>
+                        </div>
+                        <div class="coeur">
+                            <svg width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg> <!--logo heart svg-->
+                        </div>
+                    </figcaption>
+                </a>
+                <a href="./delice-des-sens.html" class="restaurants__bloc">
+                    <figure class="restaurants__bloc--image">
+                        <img class="image" src="img/restaurant/delice-des-sens.jpg" alt="Photo restaurant le délice des sens">
+                        <!--<div class="tag_nouveau">
+                            Nouveau
+                        </div>-->
+                    </figure>
+                    <figcaption class="restaurants__bloc--description">
+                        <div class="texte">
+                            <div class="texte_gras">
+                                <strong>Le délice des sens</strong>
+                            </div>
+                            <div class="texte_light">
+                                Folie-Méricourt
+                            </div>
+                        </div>
+                        <div class="coeur">
+                            <svg width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg> <!--logo heart svg-->
+                        </div>
+                    </figcaption>
+                </a>
+            </section>
+        </div>
+        <footer>
+            <div>
+                Ohmyfood
+            </div>
+            <ul>
+                <li>
+                    <a href="##">
+                        <i class="fas fa-utensils"></i>
+                        Proposer un restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        <i class="fas fa-hands-helping"></i>
+                        Devenir partenaire
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        Mentions légales
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>
