@@ -439,6 +439,18 @@ body {
             h2{
                 font-size: 2.5rem;
             }
+
+            &__bloc {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2.5rem;
+                grid-column: 1;
+                grid-row: 1;
+                @media (max-width:960px) {
+                    grid-template-columns: 1fr;
+                }
+            }
+
             a {
                 max-width: 100%;
                 height: 27.5rem;
@@ -447,18 +459,25 @@ body {
                 border-radius: 25px;
                 @include shadow(#e5e5e5);
                 overflow: hidden;
+                @media (max-width:960px){
+                    grid-template-columns: 1fr;
+                }
             }
 
-            &__bloc {
+            &__bloc--element {
                 display: flex;
                 flex-direction: column;
                 position:relative;
                 bottom: 0;
                 margin: 2rem 0 2rem 0;
+                &:hover {
+                    opacity: 0.85;
+                    transition-duration: 0.5s;
+                }
     
-                &--image {
+                figure {
                     position: relative;
-                    bottom: 0;
+                    bottom: 2rem;
                     width: 100%;
                     margin: 0;
                     &:hover > .tag_nouveau {
@@ -476,13 +495,13 @@ body {
                         padding: 0.85rem;
                         border-radius: 3px;
                         position: absolute;
-                        top: 20px;
-                        right: 20px;
+                        top: 4rem;
+                        right: 2rem;
                         z-index: 10;
                     }
                 }
 
-                &--description {
+                figcaption {
                     display: flex;
                     background-color: white;
                     min-width: 100%;
@@ -763,6 +782,9 @@ body {
                 a {
                     text-decoration: none;
                     color: white;
+                    &:hover{
+                        color: adjust-color($color: #000000, $lightness: 50%)
+                    }
                 }
             }
         }
