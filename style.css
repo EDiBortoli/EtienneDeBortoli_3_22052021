@@ -58,6 +58,13 @@
   100% {
     opacity: 1;
     transform: translateY(0px); } }
+@keyframes back-arrow {
+  0% {
+    transform: scale(1) rotate(640deg); }
+  80% {
+    transform: scale(1.1) rotate(-30deg); }
+  100% {
+    transform: scale(1) rotate(0deg); } }
 @keyframes coeur {
   0% {
     transform: scale(1) translateY(30px);
@@ -136,31 +143,31 @@ body {
       body .loader .loader__letter--7 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 0.3s; }
+        animation-delay: 0.2s; }
       body .loader .loader__letter--6 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 0.6s; }
+        animation-delay: 0.4s; }
       body .loader .loader__letter--5 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 0.9s; }
+        animation-delay: 0.6s; }
       body .loader .loader__letter--4 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 1.2s; }
+        animation-delay: 0.8s; }
       body .loader .loader__letter--3 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 1.5s; }
+        animation-delay: 1s; }
       body .loader .loader__letter--2 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 1.8s; }
+        animation-delay: 1.2s; }
       body .loader .loader__letter--1 {
         opacity: 0;
         animation: loading-letter 3s ease forwards;
-        animation-delay: 2.1s; }
+        animation-delay: 1.4s; }
     body .loader .loader__spinner {
       width: 150px;
       height: 150px; }
@@ -209,6 +216,8 @@ body {
       position: absolute;
       left: 2.5rem;
       color: black; }
+      body header .arrow-left:hover {
+        animation: back-arrow 0.5s ease-in-out forwards; }
     body header img {
       width: 170px; }
   body .page_daccueil {
@@ -432,15 +441,16 @@ body {
     flex-direction: column; }
     body .page_a-la-francaise img {
       max-width: 100%;
-      object-fit: contain; }
-    body .page_a-la-francaise .menu {
+      object-fit: cover;
+      max-height: 30rem; }
+    body .page_a-la-francaise .carte {
       background-color: #f6f6f6;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
       margin-top: -50px;
       padding: 65px 20px 65px 20px;
       z-index: 10; }
-      body .page_a-la-francaise .menu .nom_restaurant {
+      body .page_a-la-francaise .carte .nom_restaurant {
         background-color: #f6f6f6;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -448,69 +458,81 @@ body {
         min-width: 100%;
         display: flex;
         align-items: baseline; }
-        body .page_a-la-francaise .menu .nom_restaurant h2 {
+        body .page_a-la-francaise .carte .nom_restaurant h2 {
           font-family: 'Shrikhandregular', sans-serif;
           width: 100%;
           font-size: 3rem; }
-        body .page_a-la-francaise .menu .nom_restaurant .coeur {
+        body .page_a-la-francaise .carte .nom_restaurant .coeur {
           animation: coeur 1s forwards; }
-          body .page_a-la-francaise .menu .nom_restaurant .coeur svg {
+          body .page_a-la-francaise .carte .nom_restaurant .coeur svg {
             position: relative;
             bottom: -5px;
             right: 10px;
             fill: none; }
-            body .page_a-la-francaise .menu .nom_restaurant .coeur svg:hover {
+            body .page_a-la-francaise .carte .nom_restaurant .coeur svg:hover {
               /* gradient and fallback color */
               fill: url(#heart-gradient);
               cursor: pointer;
               stroke: none;
               animation: hover-coeur 0.8s ease-in-out; }
-      body .page_a-la-francaise .menu__bloc {
-        margin-bottom: 3.5rem; }
-        body .page_a-la-francaise .menu__bloc h3 {
+      body .page_a-la-francaise .carte .menu {
+        margin-bottom: 3rem; }
+        body .page_a-la-francaise .carte .menu h3 {
           margin: 5px 0 5px 0;
           font-size: 1.5rem;
           font-weight: lighter;
           animation: menu-anim 0.5s ease forwards; }
-        body .page_a-la-francaise .menu__bloc .ligne_verte {
+        body .page_a-la-francaise .carte .menu .ligne_verte {
           height: 0.3rem;
           width: 4rem;
           background-color: #99E2D0;
           animation: menu-anim 0.5s ease forwards; }
-        body .page_a-la-francaise .menu__bloc--description {
-          background-color: white;
-          max-width: 100%;
-          border-radius: 15px;
-          box-shadow: 0px 5px 10px #e7e7e7;
-          margin: 1.5rem 0;
-          overflow: hidden;
-          max-height: 7.5rem; }
-          body .page_a-la-francaise .menu__bloc--description:nth-child(1) {
+        body .page_a-la-francaise .carte .menu__bloc {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 0px 1.5rem;
+          max-height: 20rem; }
+          @media (max-width: 1150px) {
+            body .page_a-la-francaise .carte .menu__bloc {
+              grid-template-columns: 1fr 1fr; } }
+          @media (max-width: 700px) {
+            body .page_a-la-francaise .carte .menu__bloc {
+              display: block;
+              margin-bottom: 7.5rem; } }
+          body .page_a-la-francaise .carte .menu__bloc:nth-child(1) {
             animation: menu-anim 0.5s ease forwards; }
-          body .page_a-la-francaise .menu__bloc--description:nth-child(2) {
+          body .page_a-la-francaise .carte .menu__bloc:nth-child(2) {
             animation: menu-anim 1s ease forwards; }
-          body .page_a-la-francaise .menu__bloc--description:nth-child(3) {
+          body .page_a-la-francaise .carte .menu__bloc:nth-child(3) {
             animation: menu-anim 1.5s ease forwards; }
-          body .page_a-la-francaise .menu__bloc--description:nth-child(4) {
+          body .page_a-la-francaise .carte .menu__bloc:nth-child(4) {
             animation: menu-anim 2s ease forwards; }
-          body .page_a-la-francaise .menu__bloc--description:nth-child(5) {
+          body .page_a-la-francaise .carte .menu__bloc:nth-child(5) {
             animation: menu-anim 2.5s ease forwards; }
-          body .page_a-la-francaise .menu__bloc--description a {
+          body .page_a-la-francaise .carte .menu__bloc a {
             text-decoration: none;
             color: black;
+            width: 100%; }
+          body .page_a-la-francaise .carte .menu__bloc--description {
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: white;
             overflow: hidden;
-            height: 6.8rem; }
-            body .page_a-la-francaise .menu__bloc--description a:not(:hover) > .coche_verte {
+            height: 6.8rem;
+            background-color: white;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px #e7e7e7;
+            margin: 1.5rem 0;
+            overflow: hidden;
+            max-height: 7.5rem; }
+            body .page_a-la-francaise .carte .menu__bloc--description:not(:hover) > .coche_verte {
               animation: unhover-coche 1.5s forwards; }
-            body .page_a-la-francaise .menu__bloc--description a:hover > .coche_verte {
+            body .page_a-la-francaise .carte .menu__bloc--description:hover > .coche_verte {
               width: 7rem; }
-              body .page_a-la-francaise .menu__bloc--description a:hover > .coche_verte i {
+              body .page_a-la-francaise .carte .menu__bloc--description:hover > .coche_verte i {
                 animation: hover-coche 1.5s forwards; }
-            body .page_a-la-francaise .menu__bloc--description a .btn {
+            body .page_a-la-francaise .carte .menu__bloc--description .btn {
               display: flex;
               flex-direction: row;
               justify-content: space-between;
@@ -519,7 +541,7 @@ body {
               min-width: 0px;
               max-height: none;
               margin-left: 1.5rem; }
-              body .page_a-la-francaise .menu__bloc--description a .btn .texte {
+              body .page_a-la-francaise .carte .menu__bloc--description .btn .texte {
                 display: flex;
                 flex-direction: column;
                 width: 75%;
@@ -528,28 +550,28 @@ body {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap; }
-                body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_gras {
+                body .page_a-la-francaise .carte .menu__bloc--description .btn .texte .texte_gras {
                   font-size: 1.85rem;
                   font-weight: bold;
                   padding: 0 0 0.5rem 0;
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
-                body .page_a-la-francaise .menu__bloc--description a .btn .texte .texte_light {
+                body .page_a-la-francaise .carte .menu__bloc--description .btn .texte .texte_light {
                   font-size: 1.6rem;
                   font-weight: lighter;
                   display: inline-block;
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
-              body .page_a-la-francaise .menu__bloc--description a .btn .prix {
+              body .page_a-la-francaise .carte .menu__bloc--description .btn .prix {
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
                 font-size: 1.6rem;
                 font-weight: bold;
                 padding: 1.25rem 2rem 1.25rem 0; }
-            body .page_a-la-francaise .menu__bloc--description a .coche_verte {
+            body .page_a-la-francaise .carte .menu__bloc--description .coche_verte {
               display: flex;
               flex-direction: row;
               background-color: #99E2D0;
@@ -561,21 +583,20 @@ body {
               width: 0px;
               border-radius: 0px 1.5rem 1.5rem 0px;
               transition: width 0.4s ease-in; }
-              body .page_a-la-francaise .menu__bloc--description a .coche_verte i {
+              body .page_a-la-francaise .carte .menu__bloc--description .coche_verte i {
                 background-color: white;
                 display: inline-block;
                 border-radius: 1rem;
                 padding: 0.4rem;
                 animation: unhover-coche 1.5s forwards; }
-      body .page_a-la-francaise .menu .commande {
+      body .page_a-la-francaise .carte .commande {
         text-decoration: none;
         align-items: center; }
-        body .page_a-la-francaise .menu .commande .btn_rose {
+        body .page_a-la-francaise .carte .commande .btn_rose {
           cursor: pointer;
           margin: auto;
           width: max-content;
           padding: 1.75rem 6rem;
-          margin-top: 5rem;
           border-radius: 30px;
           font-size: 1.75rem;
           box-shadow: 0px 5px 10px #cdcdcd;
@@ -583,7 +604,7 @@ body {
           background: #FF79DA;
           background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
           transition: background-color 1s; }
-          body .page_a-la-francaise .menu .commande .btn_rose:hover {
+          body .page_a-la-francaise .carte .commande .btn_rose:hover {
             animation: degraded-color 0.2s forwards;
             box-shadow: 0px 5px 10px #aaaaaa; }
   body footer {

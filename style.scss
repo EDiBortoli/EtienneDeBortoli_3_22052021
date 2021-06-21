@@ -132,7 +132,15 @@ $padding-page: 25px;
 }
 
 @keyframes back-arrow {
-
+    0% {
+        transform: scale(1) rotate(640deg);
+    }
+    80% {
+        transform: scale(1.1) rotate(-30deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 @keyframes coeur {
@@ -239,37 +247,37 @@ body {
             &--7 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 0.3s;
+                animation-delay: 0.2s;
             }
             &--6 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 0.6s;
+                animation-delay: 0.4s;
             }
             &--5 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 0.9s;
+                animation-delay: 0.6s;
             }
             &--4 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 1.2s;
+                animation-delay: 0.8s;
             }
             &--3 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 1.5s;
+                animation-delay: 1s;
             }
             &--2 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 1.8s;
+                animation-delay: 1.2s;
             }
             &--1 {
                 opacity: 0;
                 animation: loading-letter 3s ease forwards;
-                animation-delay: 2.1s;
+                animation-delay: 1.4s;
             }
 
         }
@@ -327,11 +335,14 @@ body {
         @include centrer-flex-wrap;
         /*box-shadow: 0px 15px 10px -15px #aaaaaa;*/
         z-index: 50;
-        .arrow-left {
+        .arrow-left{
             font-size: 2rem;
             position: absolute;
             left:2.5rem;
             color: black;
+            &:hover {
+                animation: back-arrow 0.5s ease-in-out forwards;
+            }
         }
 
         img {
@@ -612,10 +623,11 @@ body {
 
         img {
             max-width: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            max-height: 30rem;
         }
 
-        .menu {
+        .carte {
             background-color: #f6f6f6;
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
@@ -657,9 +669,9 @@ body {
                 } 
             }
 
-            &__bloc {
+            .menu {
 
-                margin-bottom: 3.5rem;
+                margin-bottom: 3rem;
                 h3 {
                     margin: 5px 0 5px 0;
                     font-size: 1.5rem;
@@ -672,14 +684,18 @@ body {
                     background-color : $color-tertiary;
                     animation: menu-anim 0.5s ease forwards;
                 }
-                &--description {
-                    background-color: white;
-                    max-width: 100%;
-                    border-radius: 15px;
-                    @include shadow(#e7e7e7);
-                    margin: 1.5rem 0;
-                    overflow: hidden;
-                    max-height: 7.5rem;
+                &__bloc {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 0px 1.5rem;
+                    max-height: 20rem;
+                    @media (max-width:1150px) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    @media (max-width:700px) {
+                        display: block;
+                        margin-bottom: 7.5rem;
+                    }
 
                     &:nth-child(1){
                         animation: menu-anim 0.5s ease forwards;
@@ -703,12 +719,22 @@ body {
                     a {
                         text-decoration: none;
                         color: black;
+                        width: 100%;
+                    }
+                    
+                    &--description{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
-                        background-color: white;
                         overflow: hidden;
                         height: 6.8rem;
+                        background-color: white;
+                        max-width: 100%;
+                        border-radius: 15px;
+                        @include shadow(#e7e7e7);
+                        margin: 1.5rem 0;
+                        overflow: hidden;
+                        max-height: 7.5rem;
 
                         &:not(:hover) > .coche_verte {   
                             animation: unhover-coche 1.5s forwards; 
@@ -803,7 +829,6 @@ body {
                     margin: auto;
                     width: max-content;
                     padding: 1.75rem 6rem;
-                    margin-top: 5rem;
                     @include radius();
                     font-size: 1.75rem;
                     @include shadow(#cdcdcd);
