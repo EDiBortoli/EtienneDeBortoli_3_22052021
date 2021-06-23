@@ -109,7 +109,7 @@ html {
 
 body {
   font-family: 'robotoregular', sans-serif;
-  min-width: 380px;
+  min-width: 360px;
   max-width: 1920px;
   margin: 0;
   padding: 0; }
@@ -436,21 +436,21 @@ body {
                 cursor: pointer;
                 stroke: none;
                 animation: hover-coeur 0.8s ease-in-out; }
-  body .page_a-la-francaise {
+  body .page_restaurant {
     display: flex;
     flex-direction: column; }
-    body .page_a-la-francaise img {
+    body .page_restaurant img {
       max-width: 100%;
       object-fit: cover;
       max-height: 30rem; }
-    body .page_a-la-francaise .carte {
+    body .page_restaurant .carte {
       background-color: #f6f6f6;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
       margin-top: -50px;
       padding: 65px 20px 65px 20px;
       z-index: 10; }
-      body .page_a-la-francaise .carte .nom_restaurant {
+      body .page_restaurant .carte .nom_restaurant {
         background-color: #f6f6f6;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -458,62 +458,62 @@ body {
         min-width: 100%;
         display: flex;
         align-items: baseline; }
-        body .page_a-la-francaise .carte .nom_restaurant h2 {
+        body .page_restaurant .carte .nom_restaurant h2 {
           font-family: 'Shrikhandregular', sans-serif;
           width: 100%;
           font-size: 3rem; }
-        body .page_a-la-francaise .carte .nom_restaurant .coeur {
+        body .page_restaurant .carte .nom_restaurant .coeur {
           animation: coeur 1s forwards; }
-          body .page_a-la-francaise .carte .nom_restaurant .coeur svg {
+          body .page_restaurant .carte .nom_restaurant .coeur svg {
             position: relative;
             bottom: -5px;
             right: 10px;
             fill: none; }
-            body .page_a-la-francaise .carte .nom_restaurant .coeur svg:hover {
+            body .page_restaurant .carte .nom_restaurant .coeur svg:hover {
               /* gradient and fallback color */
               fill: url(#heart-gradient);
               cursor: pointer;
               stroke: none;
               animation: hover-coeur 0.8s ease-in-out; }
-      body .page_a-la-francaise .carte .menu {
+      body .page_restaurant .carte .menu {
         margin-bottom: 3rem; }
-        body .page_a-la-francaise .carte .menu h3 {
+        body .page_restaurant .carte .menu h3 {
           margin: 5px 0 5px 0;
           font-size: 1.5rem;
           font-weight: lighter;
           animation: menu-anim 0.5s ease forwards; }
-        body .page_a-la-francaise .carte .menu .ligne_verte {
+        body .page_restaurant .carte .menu .ligne_verte {
           height: 0.3rem;
           width: 4rem;
           background-color: #99E2D0;
           animation: menu-anim 0.5s ease forwards; }
-        body .page_a-la-francaise .carte .menu__bloc {
+        body .page_restaurant .carte .menu__bloc {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 0px 1.5rem;
           max-height: 20rem; }
           @media (max-width: 1150px) {
-            body .page_a-la-francaise .carte .menu__bloc {
+            body .page_restaurant .carte .menu__bloc {
               grid-template-columns: 1fr 1fr; } }
           @media (max-width: 700px) {
-            body .page_a-la-francaise .carte .menu__bloc {
+            body .page_restaurant .carte .menu__bloc {
               display: block;
               margin-bottom: 7.5rem; } }
-          body .page_a-la-francaise .carte .menu__bloc:nth-child(1) {
+          body .page_restaurant .carte .menu__bloc:nth-child(1) {
             animation: menu-anim 0.5s ease forwards; }
-          body .page_a-la-francaise .carte .menu__bloc:nth-child(2) {
+          body .page_restaurant .carte .menu__bloc:nth-child(2) {
             animation: menu-anim 1s ease forwards; }
-          body .page_a-la-francaise .carte .menu__bloc:nth-child(3) {
+          body .page_restaurant .carte .menu__bloc:nth-child(3) {
             animation: menu-anim 1.5s ease forwards; }
-          body .page_a-la-francaise .carte .menu__bloc:nth-child(4) {
+          body .page_restaurant .carte .menu__bloc:nth-child(4) {
             animation: menu-anim 2s ease forwards; }
-          body .page_a-la-francaise .carte .menu__bloc:nth-child(5) {
+          body .page_restaurant .carte .menu__bloc:nth-child(5) {
             animation: menu-anim 2.5s ease forwards; }
-          body .page_a-la-francaise .carte .menu__bloc a {
+          body .page_restaurant .carte .menu__bloc a {
             text-decoration: none;
             color: black;
             width: 100%; }
-          body .page_a-la-francaise .carte .menu__bloc--description {
+          body .page_restaurant .carte .menu__bloc--description {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -526,13 +526,13 @@ body {
             margin: 1.5rem 0;
             overflow: hidden;
             max-height: 7.5rem; }
-            body .page_a-la-francaise .carte .menu__bloc--description:not(:hover) > .coche_verte {
+            body .page_restaurant .carte .menu__bloc--description:not(:hover) > .coche_verte {
               animation: unhover-coche 1.5s forwards; }
-            body .page_a-la-francaise .carte .menu__bloc--description:hover > .coche_verte {
+            body .page_restaurant .carte .menu__bloc--description:hover > .coche_verte {
               width: 7rem; }
-              body .page_a-la-francaise .carte .menu__bloc--description:hover > .coche_verte i {
+              body .page_restaurant .carte .menu__bloc--description:hover > .coche_verte i {
                 animation: hover-coche 1.5s forwards; }
-            body .page_a-la-francaise .carte .menu__bloc--description .btn {
+            body .page_restaurant .carte .menu__bloc--description .btn {
               display: flex;
               flex-direction: row;
               justify-content: space-between;
@@ -541,7 +541,7 @@ body {
               min-width: 0px;
               max-height: none;
               margin-left: 1.5rem; }
-              body .page_a-la-francaise .carte .menu__bloc--description .btn .texte {
+              body .page_restaurant .carte .menu__bloc--description .btn .texte {
                 display: flex;
                 flex-direction: column;
                 width: 75%;
@@ -550,28 +550,28 @@ body {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap; }
-                body .page_a-la-francaise .carte .menu__bloc--description .btn .texte .texte_gras {
+                body .page_restaurant .carte .menu__bloc--description .btn .texte .texte_gras {
                   font-size: 1.85rem;
                   font-weight: bold;
                   padding: 0 0 0.5rem 0;
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
-                body .page_a-la-francaise .carte .menu__bloc--description .btn .texte .texte_light {
+                body .page_restaurant .carte .menu__bloc--description .btn .texte .texte_light {
                   font-size: 1.6rem;
                   font-weight: lighter;
                   display: inline-block;
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
-              body .page_a-la-francaise .carte .menu__bloc--description .btn .prix {
+              body .page_restaurant .carte .menu__bloc--description .btn .prix {
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
                 font-size: 1.6rem;
                 font-weight: bold;
                 padding: 1.25rem 2rem 1.25rem 0; }
-            body .page_a-la-francaise .carte .menu__bloc--description .coche_verte {
+            body .page_restaurant .carte .menu__bloc--description .coche_verte {
               display: flex;
               flex-direction: row;
               background-color: #99E2D0;
@@ -583,16 +583,16 @@ body {
               width: 0px;
               border-radius: 0px 1.5rem 1.5rem 0px;
               transition: width 0.4s ease-in; }
-              body .page_a-la-francaise .carte .menu__bloc--description .coche_verte i {
+              body .page_restaurant .carte .menu__bloc--description .coche_verte i {
                 background-color: white;
                 display: inline-block;
                 border-radius: 1rem;
                 padding: 0.4rem;
                 animation: unhover-coche 1.5s forwards; }
-      body .page_a-la-francaise .carte .commande {
+      body .page_restaurant .carte .commande {
         text-decoration: none;
         align-items: center; }
-        body .page_a-la-francaise .carte .commande .btn_rose {
+        body .page_restaurant .carte .commande .btn_rose {
           cursor: pointer;
           margin: auto;
           width: max-content;
@@ -604,7 +604,7 @@ body {
           background: #FF79DA;
           background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
           transition: background-color 1s; }
-          body .page_a-la-francaise .carte .commande .btn_rose:hover {
+          body .page_restaurant .carte .commande .btn_rose:hover {
             animation: degraded-color 0.2s forwards;
             box-shadow: 0px 5px 10px #aaaaaa; }
   body footer {
@@ -637,7 +637,7 @@ body {
       @media (max-width: 700px) {
         body footer ul {
           display: block;
-          padding-left: 2.5rem; } }
+          padding: 0 0 0 2.5rem; } }
       body footer ul li {
         padding-bottom: 1rem; }
         body footer ul li a {
