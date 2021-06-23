@@ -497,7 +497,7 @@ body {
               grid-template-columns: 1fr 1fr; } }
           @media (max-width: 700px) {
             body .page_restaurant .carte .menu__bloc {
-              display: block;
+              display: contents;
               margin-bottom: 7.5rem; } }
           body .page_restaurant .carte .menu__bloc:nth-child(1) {
             animation: menu-anim 0.5s ease forwards; }
