@@ -715,15 +715,10 @@ body {
                     &:nth-child(5){
                         animation: menu-anim 2.5s ease forwards;
                     }
-
-                    a {
-                        text-decoration: none;
-                        color: black;
-                        width: 100%;
-                    }
                     
                     &--description{
                         display: flex;
+                        color: black;
                         flex-direction: row;
                         align-items: center;
                         overflow: hidden;
@@ -735,6 +730,7 @@ body {
                         margin: 1.5rem 0;
                         overflow: hidden;
                         max-height: 7.5rem;
+                        cursor: pointer;
 
                         &:not(:hover) > .coche_verte {   
                             animation: unhover-coche 1.5s forwards; 
@@ -821,8 +817,12 @@ body {
             }
 
             .commande {
-                text-decoration: none;
                 align-items: center;
+                display: flex;
+
+                a {
+                    text-decoration: none;
+                }
 
                 .btn_rose {
                     cursor: pointer;
