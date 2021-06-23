@@ -60,11 +60,11 @@
     transform: translateY(0px); } }
 @keyframes back-arrow {
   0% {
-    transform: scale(1) rotate(640deg); }
+    transform: scale(1) rotateX(360deg) translateX(0rem); }
   80% {
-    transform: scale(1.1) rotate(-30deg); }
+    transform: scale(1.2) rotateX(-30deg) translateX(-0.7rem); }
   100% {
-    transform: scale(1) rotate(0deg); } }
+    transform: scale(1) rotateX(0deg) translateX(0); } }
 @keyframes coeur {
   0% {
     transform: scale(1) translateY(30px);
@@ -217,7 +217,7 @@ body {
       left: 2.5rem;
       color: black; }
       body header .arrow-left:hover {
-        animation: back-arrow 0.5s ease-in-out forwards; }
+        animation: back-arrow 0.8s ease-in-out forwards; }
     body header img {
       width: 170px; }
   body .page_daccueil {
