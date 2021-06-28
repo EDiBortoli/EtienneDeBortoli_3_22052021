@@ -43,7 +43,7 @@
   50% {
     background: linear-gradient(0deg, #ff79da 0%, #9356dc 47%); }
   100% {
-    background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%); } }
+    background: linear-gradient(0deg, #ff79da 30%, #9356dc 100%); } }
 @keyframes new {
   0% {
     transform: scale(1); }
@@ -281,7 +281,8 @@ body {
           background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
           transition: background-color 1000ms; }
           body .page_daccueil .presentation a .btn_rose:hover {
-            animation: degraded-color 0.2s forwards; }
+            animation: degraded-color 0.2s forwards;
+            box-shadow: 0px 5px 10px #aaaaaa; }
     body .page_daccueil .fonctionnement {
       padding: 50px 25px 50px 25px; }
       body .page_daccueil .fonctionnement__titre {
