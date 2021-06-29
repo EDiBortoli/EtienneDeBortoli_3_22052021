@@ -95,12 +95,10 @@
   font-style: normal; }
 @font-face {
   font-family: 'robotothin';
-  src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype");
-  font-style: thin; }
+  src: url("./font/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype"); }
 @font-face {
   font-family: 'robotobold';
-  src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype");
-  font-style: bold; }
+  src: url("./font/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype"); }
 @font-face {
   font-family: 'Shrikhandregular';
   src: url("./font/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); }
