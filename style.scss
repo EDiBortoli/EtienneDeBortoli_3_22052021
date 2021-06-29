@@ -507,8 +507,10 @@ body {
         .restaurants {
             background-color: #f6f6f6;
             max-width: 100%;
-            @include padding-general;
-            
+            padding: 5rem 10rem;
+            @media (max-width:1400px) {
+                @include padding-general;
+            }
             h2{
                 font-size: 2.5rem;
             }
@@ -516,9 +518,13 @@ body {
             &__bloc {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 2.5rem;
+                grid-column-gap: 10rem;
+                grid-row-gap: 2.5rem;
                 grid-column: 1;
                 grid-row: 1;
+                @media (max-width:1400px) {
+                    grid-gap: 2.5rem;
+                }
                 @media (max-width:960px) {
                     grid-template-columns: 1fr;
                 }
@@ -558,8 +564,11 @@ body {
                     }
                     img{
                         width: 100%;
-                        height: 220px;
+                        height: 28rem;
                         object-fit: cover;
+                        @media (max-width:1400px) {
+                            height: 220px;
+                        }
                     }
                     .tag_nouveau {
                         color: #038868;
@@ -579,8 +588,11 @@ body {
                     min-width: 100%;
                     height: 30%;
                     position: relative;
-                    bottom: 1.2rem;
+                    bottom: 7.2rem;
                     z-index: 10;
+                    @media (max-width:1400px) {
+                        bottom: 1.2rem;
+                    }
 
                     .texte {
                         display: flex;
