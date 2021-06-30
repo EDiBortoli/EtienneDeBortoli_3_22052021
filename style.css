@@ -474,6 +474,9 @@ body {
           font-family: 'Shrikhandregular', sans-serif;
           width: 100%;
           font-size: 3rem; }
+          @media (max-width: 400px) {
+            body .page_restaurant .carte .nom_restaurant h2 {
+              font-size: 2.5rem; } }
         body .page_restaurant .carte .nom_restaurant .coeur {
           animation: coeur 1s forwards; }
           body .page_restaurant .carte .nom_restaurant .coeur svg {
@@ -556,10 +559,7 @@ body {
                 flex-direction: column;
                 width: 75%;
                 font-size: 1.75rem;
-                padding: 1.25rem 0 1.25rem 0;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap; }
+                padding: 1.25rem 0 1.25rem 0; }
                 body .page_restaurant .carte .menu__bloc--description .btn .texte .texte_gras {
                   font-size: 1.85rem;
                   font-weight: bold;
@@ -567,6 +567,9 @@ body {
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
+                  @media (max-width: 400px) {
+                    body .page_restaurant .carte .menu__bloc--description .btn .texte .texte_gras {
+                      font-size: 1.5rem; } }
                 body .page_restaurant .carte .menu__bloc--description .btn .texte .texte_light {
                   font-size: 1.6rem;
                   font-weight: lighter;
@@ -574,6 +577,9 @@ body {
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis; }
+                  @media (max-width: 400px) {
+                    body .page_restaurant .carte .menu__bloc--description .btn .texte .texte_light {
+                      font-size: 1.35rem; } }
               body .page_restaurant .carte .menu__bloc--description .btn .prix {
                 display: flex;
                 align-items: flex-end;
