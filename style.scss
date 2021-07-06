@@ -29,6 +29,12 @@ $color-tertiary: #99E2D0;
     font-weight: lighter;
 }
 
+@mixin texte_ellipsis {
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
 @mixin background-opacity($color) {
     background-color: adjust-color($color, $hue: 0, $saturation: 5%, $lightness: 35%);
 }
@@ -770,9 +776,7 @@ body {
                                 .texte_gras {
                                     @include texte_gras();
                                     padding: 0 0 0.5rem 0;
-                                    overflow: hidden;
-                                    white-space:nowrap;
-                                    text-overflow: ellipsis;
+                                    @include texte_ellipsis;
                                     @media (max-width:400px) {
                                         font-size: 1.5rem;
                                     }
@@ -781,9 +785,7 @@ body {
                                 .texte_light {
                                     @include texte_light();
                                     display: inline-block;
-                                    overflow: hidden;
-                                    white-space:nowrap;
-                                    text-overflow: ellipsis;
+                                    @include texte_ellipsis;
                                     @media (max-width:400px) {
                                         font-size: 1.35rem;
                                     }
@@ -811,8 +813,8 @@ body {
                             justify-content: center;
                             align-items: center;
                             height: 7rem;
-                            width: 0px;
                             border-radius: 0px 1.5rem 1.5rem 0px;
+                            width: 0px;
                             transition: width 0.4s ease-in;
 
                             i {
